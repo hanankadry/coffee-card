@@ -8,12 +8,19 @@ class CoffeePrefs extends StatefulWidget {
 }
 
 class _CoffeePrefsState extends State<CoffeePrefs> {
+  int strength = 1;
+  int sugars = 1;
+
   void incStrength() {
-    print('inc strength');
+    setState(() {
+      strength = strength < 5 ? strength++ : 1;
+    });
   }
 
   void incSugars() {
-    print('inc sugars');
+    setState(() {
+      sugars = sugars < 5 ? sugars++ : 0;
+    });
   }
 
   @override
@@ -23,7 +30,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             const Text('Strength: '),
-            const Text('3'),
+            Text('$strength'),
             Image.asset(
               'assets/img/coffee_bean.png',
               width: 25,
@@ -37,7 +44,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             const Text('Sugars: '),
-            const Text('2'),
+            Text('$sugars'),
             Image.asset(
               'assets/img/sugar_cube.png',
               width: 25,
@@ -45,7 +52,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
               colorBlendMode: BlendMode.multiply,
             ),
             Expanded(child: SizedBox()),
-            FilledButton(onPressed: incStrength, child: Text('+')),
+            FilledButton(onPressed: incSugars, child: Text('+')),
           ],
         ),
       ],
