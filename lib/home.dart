@@ -14,7 +14,27 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.brown[700],
         centerTitle: true,
       ),
-      body: const Text('Home content'),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.brown[200],
+            padding: EdgeInsets.all(20),
+            child: const Text('How I like my coffee'),
+          ),
+          Container(
+            color: Colors.brown[100],
+            padding: EdgeInsets.all(20),
+            child: const Text('coffee preferences...'),
+          ),
+          Expanded(
+            child: Image.asset(
+              'assets/img/coffee_bg.jpg',
+              fit: BoxFit.fitWidth,
+              alignment: Alignment.bottomCenter,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
