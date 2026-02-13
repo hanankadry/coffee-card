@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter_launcher_icons: "^0.14.4"
   flutter:
     sdk: flutter
 
@@ -58,7 +59,7 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
+  assets:
     - assets/img/coffee_bg.jpg
     - assets/img/coffee_bean.png
     - assets/img/sugar_cube.png

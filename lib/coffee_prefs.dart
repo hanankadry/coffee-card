@@ -31,7 +31,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            const StyledBodyText('Strength: '),
+            const StyledBodyText('Strength: ', 18),
 
             for (int i = 0; i < strength; i++) 
               Image.asset('assets/img/coffee_bean.png',
@@ -49,10 +49,10 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            const StyledBodyText('Sugars: '),
+            const StyledBodyText('Sugars: ', 18),
             
             if (sugars == 0) 
-              const StyledBodyText('No Sugars....'),
+              const StyledBodyText('No Sugars....', 14),
             
             for (int i = 0; i < sugars; i++)
               Image.asset('assets/img/sugar_cube.png',
